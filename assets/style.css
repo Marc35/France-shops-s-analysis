@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Dashboard style — on top of the theme defined in .streamlit/config.toml.
+   One motif only: the enamel street sign (enamel blue, white rule, green frame),
+   used for the title plaque and the chapter "house numbers".
+   ========================================================================== */
+
+:root {
+  --enamel-blue: #1F3F77;
+  --enamel-green: #2F6B4F;
+  --enamel-white: #FFFFFF;
+  --ink: #1C2430;
+  --ink-muted: #5B6573;
+}
+
+/* Comfortable page width on large screens */
+.block-container {
+  max-width: 1180px;
+  padding-top: 4.5rem;   /* leaves room for Streamlit's top bar */
+}
+
+/* --- Title plaque (hero) -------------------------------------------------- */
+.plaque {
+  background: var(--enamel-blue);
+  color: var(--enamel-white);
+  border: 7px solid var(--enamel-green);                 /* green frame */
+  border-radius: 18px;
+  box-shadow: inset 0 0 0 5px var(--enamel-blue),
+              inset 0 0 0 7px var(--enamel-white);       /* white rule inside */
+  padding: 2rem 2.5rem 2.2rem;
+  text-align: center;
+}
+.plaque-kicker {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+}
+.plaque-title {
+  margin: 0.3rem 0 0.45rem;
+  font-family: "Barlow Semi Condensed", "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.1rem, 4.8vw, 3.5rem);
+  line-height: 1.04;
+  letter-spacing: 0.005em;
+}
+.plaque-sub {
+  margin: 0;
+  font-weight: 500;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  color: #DCE5F3;
+}
+
+/* --- Chapter headings with an enamel house number --------------------------- */
+.chapter {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 2.6rem 0 0.4rem;
+}
+.house-number {
+  flex: none;
+  width: 2.9rem;
+  height: 2.9rem;
+  display: grid;
+  place-items: center;
+  background: var(--enamel-blue);
+  color: var(--enamel-white);
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 3px var(--enamel-blue),
+              inset 0 0 0 4.5px var(--enamel-white);
+  font-family: "Barlow Semi Condensed", "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+.chapter-title {
+  margin: 0;
+  font-family: "Barlow Semi Condensed", "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2.8vw, 2.05rem);
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+/* --- Reading comfort -------------------------------------------------------- */
+.st-key-intro p,
+.st-key-intro li {
+  max-width: 72ch;
+  font-size: 1.07rem;
+  line-height: 1.6;
+}
+[data-testid="stCaptionContainer"] p {
+  max-width: 95ch;
+}
+[data-testid="stMetricLabel"] p {
+  color: var(--ink-muted);
+}
+
+/* --- Small screens ---------------------------------------------------------- */
+@media (max-width: 640px) {
+  .block-container { padding-top: 3.5rem; }
+  .plaque { padding: 1.4rem 1.2rem 1.5rem; border-width: 5px; border-radius: 14px; }
+  .house-number { width: 2.4rem; height: 2.4rem; font-size: 1.3rem; }
+}
