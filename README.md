@@ -4,9 +4,8 @@ Individual data-storytelling project, **Data Visualization** course, Efrei Paris
 Author: **Thomas DURIAUD** (DAI) — Teacher: Mano Joseph Mathew.
 An AI coding assistant was used for part of the code: see [section 7](#7-ai-assistance-and-credits).
 
-- Deployed app: `<add the Streamlit Community Cloud URL here>`
-- Demo video (2–4 min): `<add the video link here>`
-- Repository: `<add the GitHub link here>`
+- Deployed app: https://france-shops-s-analysis.streamlit.app/
+- Repository: https://github.com/Marc35/France-shops-s-analysis
 
 ---
 
