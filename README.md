@@ -1,8 +1,7 @@
 # Bread, medicine, groceries — is France equal when it comes to local shops?
 
-Individual data-storytelling project, **Data Visualization** course, Efrei Paris (2026).
-Author: **Thomas DURIAUD** (DAI) — Teacher: Mano Joseph Mathew.
-An AI coding assistant was used for part of the code: see [section 7](#7-ai-assistance-and-credits).
+**Data Visualization** course
+Author: Thomas DURIAUD — Teacher: Mano Joseph Mathew.
 
 - Deployed app: https://france-shops-s-analysis.streamlit.app/
 - Repository: https://github.com/Marc35/France-shops-s-analysis
@@ -62,11 +61,7 @@ python download_data.py           # add --force to get today's BANCO export
 streamlit run app.py
 ```
 
-The first run downloads the two files (about 50 MB) and prepares the tables (about a minute); the next runs take a few seconds.
-
-**Deploy on Streamlit Community Cloud:** push the repository to GitHub, create an app on share.streamlit.io with
-`app.py` as the main file (Python 3.12+). The data is downloaded on the first start. The app uses about
-1.1 to 1.6 GB of memory (Community Cloud limit: 2.7 GB).
+The first run downloads the two files (about 50 MB) and prepares the tables ; the next runs take a few seconds.
 
 ## 4. Project structure
 
@@ -133,7 +128,7 @@ with a neutral midpoint for "above / below average".
 
 ## 7. AI assistance and credits
 
-**Use of AI.** Claude (Anthropic) was used as a coding assistant during the project, in particular to build the
+**Use of AI.** AI was used as a coding assistant during the project, in particular to build the
 Streamlit charts and maps (Plotly) and to prepare the deployment of the app (data download script, pinned
 dependencies, Streamlit Community Cloud setup). The choice of the dataset, the questions explored and the final
 review of the results are the author's. Every piece of suggested code was run, tested on the real data and adapted
